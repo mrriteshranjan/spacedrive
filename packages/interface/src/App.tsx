@@ -28,10 +28,9 @@ import { CoreEvent } from '@sd/core';
 import clsx from 'clsx';
 import './style.scss';
 import { ContentScreen } from './screens/Content';
-<<<<<<< HEAD
-=======
 import LibrarySettings from './screens/settings/LibrarySettings';
->>>>>>> parent of b7b0ec3 (interfont)
+
+import '@fontsource/inter/variable.css';
 
 const queryClient = new QueryClient();
 
@@ -96,9 +95,12 @@ function SettingsRoutes({ modal = false }) {
           <Route path="security" element={<SecuritySettings />} />
           <Route path="appearance" element={<></>} />
           <Route path="locations" element={<LocationSettings />} />
+          <Route path="library" element={<LibrarySettings />} />
           <Route path="media" element={<></>} />
           <Route path="keys" element={<></>} />
           <Route path="tags" element={<></>} />
+          <Route path="sync" element={<></>} />
+          <Route path="contacts" element={<></>} />
         </Route>
       </Routes>
     </SlideUp>
