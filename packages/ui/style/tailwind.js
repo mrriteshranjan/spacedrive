@@ -11,13 +11,6 @@ module.exports = function (app, options) {
     darkMode: app == 'landing' ? 'class' : 'class',
     mode: 'jit',
     theme: {
-      // fontFamily: {
-      //   sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-      //   serif: ['Inter', 'ui-serif', 'Georgia'],
-      //   mono: ['ui-monospace', 'SFMono-Regular'],
-      //   display: ['Inter'],
-      //   body: ['"Inter"']
-      // },
       fontSize: {
         'tiny': '.65rem',
         'xs': '.75rem',

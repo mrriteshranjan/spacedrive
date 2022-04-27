@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button } from '@sd/ui';
 import { Bubbles } from '../components/Bubbles';
 
@@ -7,7 +7,6 @@ import { Footer } from '../components/Footer';
 import { Apple, Github, Linux, Windows } from '@icons-pack/react-simple-icons';
 import { useState } from 'react';
 import clsx from 'clsx';
-import AppEmbed from '../components/AppEmbed';
 
 interface SectionProps {
   orientation: 'left' | 'right';
@@ -41,18 +40,7 @@ function Section(props: SectionProps = { orientation: 'left' }) {
 }
 
 function Page() {
-  // const [appLoaded, setAppLoaded] = useState(false);
-
-  // function handleResize(event: Event) {
-  //   if (window.innerWidth > 1000) setShowApp(true);
-  //   else if (showApp) setShowApp(false);
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, []);
-
+  const [showApp, setShowApp] = useState(false);
   return (
     <>
       <div className="mt-28 lg:mt-36" />
@@ -97,7 +85,21 @@ function Page() {
         Shortly after to iOS & Android.
       </p>
 
-      <AppEmbed />
+      <div className="h-[300px] lg:h-[600px] mt-16 w-screen max-w-[100vw] relative overflow-hidden relative">
+        <iframe
+          className={clsx(
+            'absolute w-[1200px] h-[300px] lg:h-[600px] z-30 border rounded-lg shadow-2xl inset-center bg-gray-850 border-gray-550',
+            showApp ? 'opacity-100' : 'opacity-0'
+          )}
+          onLoad={(event) => {
+            setShowApp(true);
+          }}
+          src={`${
+            import.meta.env.VITE_SDWEB_BASE_URL || 'http://localhost:8002'
+          }?library_id=9068c6ec-cf90-451b-bb30-4174781e7bc6`}
+        />
+        <div className="w-[800px] ml-[230px] md:ml-[100px] lg:ml-0 lg:w-[1200px] h-[300px] lg:h-[600px] inset-center absolute z-20 landing-img" />
+      </div>
       <Section
         orientation="right"
         heading="Never leave a file behind."

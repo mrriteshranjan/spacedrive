@@ -6,11 +6,11 @@ import {
   PhotographIcon,
   TagIcon,
   UsersIcon
-} from '@heroicons/react/outline';
+} from '@heroicons/react/solid';
 import React from 'react';
 // import { dummyIFile, FileList } from '../components/file/FileList';
 import { SidebarLink } from '../components/file/Sidebar';
-import { Book, Database, HardDrive, PaintBrush } from 'phosphor-react';
+import { HardDrive, PaintBrush } from 'phosphor-react';
 import clsx from 'clsx';
 import { Outlet } from 'react-router-dom';
 
@@ -47,15 +47,14 @@ export const SettingsScreen: React.FC<{}> = () => {
         </SidebarLink>
 
         <Heading>Library</Heading>
-        <SidebarLink to="/settings/library">
-          <Icon component={Database} />
-          Database
-        </SidebarLink>
         <SidebarLink to="/settings/locations">
           <Icon component={HardDrive} />
           Locations
         </SidebarLink>
-
+        <SidebarLink to="/settings/media">
+          <Icon component={PhotographIcon} />
+          Media
+        </SidebarLink>
         <SidebarLink to="/settings/keys">
           <Icon component={KeyIcon} />
           Keys

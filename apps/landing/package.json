@@ -8,8 +8,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@fontsource/inter": "^4.5.7",
+<<<<<<< HEAD
+=======
     "@headlessui/react": "^1.5.0",
+>>>>>>> parent of b7b0ec3 (interfont)
     "@heroicons/react": "^1.0.6",
     "@icons-pack/react-simple-icons": "^4.6.1",
     "@sd/client": "workspace:*",
@@ -25,7 +27,6 @@
     "phosphor-react": "^1.4.1",
     "prismjs": "^1.28.0",
     "react": "^18.0.0",
-    "react-device-detect": "^2.2.2",
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "6.3.0",
