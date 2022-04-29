@@ -16,10 +16,9 @@ export default function AppEmbed() {
 
   // after five minutes kill the live demo
   useEffect(() => {
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setIframeAppReady(false);
     }, 300000);
-    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
