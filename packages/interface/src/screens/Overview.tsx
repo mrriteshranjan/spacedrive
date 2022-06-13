@@ -58,14 +58,12 @@ export const OverviewScreen: React.FC<{}> = (props) => {
             locations={[{ name: 'Camera Roll' }, { name: 'Notes' }]}
             type="phone"
           />
-          <Device
-            name={`Spacedrive Server`}
-            size="5GB"
-            locations={[{ name: 'Cached' }, { name: 'Photos' }, { name: 'Documents' }]}
-            type="server"
-          />
         </div>
+<<<<<<< HEAD
         {/* <hr className="my-4 border-none dark:border-gray-600" /> */}
+=======
+        {/* <hr className="my-5 border-gray-50 dark:border-gray-600" /> */}
+>>>>>>> parent of df08e56 (web build + overview tweaks)
 
         {/* <div className="mt-2 space-x-1">
           <FileItem

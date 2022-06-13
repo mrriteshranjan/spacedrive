@@ -1,5 +1,4 @@
 import {
-  Cloud,
   Desktop,
   DeviceMobileCamera,
   DotsSixVertical,
@@ -18,7 +17,7 @@ import LoadingIcons, { Rings } from 'react-loading-icons';
 export interface DeviceProps {
   name: string;
   size: string;
-  type: 'laptop' | 'desktop' | 'phone' | 'server';
+  type: 'laptop' | 'desktop' | 'phone';
   locations: { name: string }[];
   runningJob?: { amount: number; task: string };
 }
@@ -37,7 +36,6 @@ export function Device(props: DeviceProps) {
         {props.type === 'phone' && <DeviceMobileCamera weight="fill" size={20} className="mr-2" />}
         {props.type === 'laptop' && <Laptop weight="fill" size={20} className="mr-2" />}
         {props.type === 'desktop' && <Desktop weight="fill" size={20} className="mr-2" />}
-        {props.type === 'server' && <Cloud weight="fill" size={20} className="mr-2" />}
         <h3 className="font-semibold text-md">{props.name}</h3>
         <div className="flex flex-row space-x-1.5 mt-0.5">
           <span className="font-semibold flex flex-row h-[19px] -mt-0.5 ml-3 py-0.5 px-1.5 text-[10px] rounded  bg-gray-500 text-gray-400">
